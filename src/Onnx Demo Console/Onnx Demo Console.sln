@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onnx Demo Console", "Onnx Demo Console\Onnx Demo Console.csproj", "{F1E0A165-A2E6-4480-B838-13993907DAE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1E0A165-A2E6-4480-B838-13993907DAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E0A165-A2E6-4480-B838-13993907DAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E0A165-A2E6-4480-B838-13993907DAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E0A165-A2E6-4480-B838-13993907DAE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43A10FA9-4B33-4255-9F9E-7BE6F02D2F8F}
+	EndGlobalSection
+EndGlobal
