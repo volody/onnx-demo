@@ -26,6 +26,7 @@ namespace Onnx_Demo_Console
 
 
             // 2. convert to onnx
+            // https://github.com/onnx/tensorflow-onnx/blob/master/tutorials/BertTutorial.ipynb
 
             // 3. run inverence
             //var session = new InferenceSession("model.onnx");
