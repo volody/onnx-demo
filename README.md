@@ -10,6 +10,8 @@ https://storage.googleapis.com/download.tensorflow.org/models/tflite/bert_qa/mob
 
 
 ### 2. convert to onnx
+
+Open notebook in colab and select GPU runtime
 // https://github.com/onnx/tensorflow-onnx/blob/master/tutorials/BertTutorial.ipynb
 
 ### 3. run inverence
