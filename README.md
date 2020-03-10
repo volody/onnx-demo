@@ -12,4 +12,4 @@ https://github.com/onnx/models/blob/master/text/machine_comprehension/bert-squad
 ### inverence
 //var session = new InferenceSession("model.onnx");
 
-### 4. display result
+### display result
