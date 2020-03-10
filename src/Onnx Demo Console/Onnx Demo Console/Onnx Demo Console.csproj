@@ -7,7 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\..\..\input\mnist\sample_image.png" Link="input\sample_image.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\model\mnist\model.onnx" Link="model\model.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="model\" />
+    <Folder Include="input\" />
   </ItemGroup>
 
 </Project>

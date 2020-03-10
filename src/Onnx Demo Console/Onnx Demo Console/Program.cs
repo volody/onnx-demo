@@ -2,6 +2,7 @@
 using Microsoft.ML.OnnxRuntime.Tensors;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Onnx_Demo_Console
@@ -19,22 +20,26 @@ namespace Onnx_Demo_Console
     {
         static void Main(string[] args)
         {
-            // 1. download model
-            // https://www.tensorflow.org/lite/models/bert_qa/overview
-            // download model
-            // https://storage.googleapis.com/download.tensorflow.org/models/tflite/bert_qa/mobilebert_qa_vocab.zip
-
-
-            // 2. convert to onnx
-            // https://github.com/onnx/tensorflow-onnx/blob/master/tutorials/BertTutorial.ipynb
-
-            // 3. run inverence
-            //var session = new InferenceSession("model.onnx");
-
-            // 4. display result
+            var session = new InferenceSession(@"model\model.onnx");
+            var img = ConvertImageToByteArray(@"input\sample_image.png");
+            var result = PredictLocal(session, img);
+            Console.WriteLine(result);
         }
 
-        private Score PredictLocal(InferenceSession session, float[] digit)
+        public static float[] ConvertImageToByteArray(string imagePath)
+        {
+            float[] imageByteArray = null;
+            FileStream fileStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+            using (BinaryReader reader = new BinaryReader(fileStream))
+            {
+                imageByteArray = new float[reader.BaseStream.Length];
+                for (int i = 0; i < reader.BaseStream.Length; i++)
+                    imageByteArray[i] = reader.ReadByte();
+            }
+            return imageByteArray;
+        }
+
+        static Score PredictLocal(InferenceSession session, float[] digit)
         {
             var now = DateTime.Now;
             Tensor<float> x = new DenseTensor<float>(digit.Length);
