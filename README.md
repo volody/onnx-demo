@@ -1,6 +1,6 @@
 # onnx-demo
 
-### 1. download model
+### download model
 
 BERT-Squad<br>
 This model answers questions based on the context of the given input paragraph.<br>
