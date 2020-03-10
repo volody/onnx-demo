@@ -2,19 +2,14 @@
 
 ### 1. download model
 
-BERT QA Overview
-https://www.tensorflow.org/lite/models/bert_qa/overview
+BERT-Squad<br>
+This model answers questions based on the context of the given input paragraph.<br>
+https://github.com/onnx/models/tree/master/text/machine_comprehension/bert-squad
 
-download
-https://storage.googleapis.com/download.tensorflow.org/models/tflite/bert_qa/mobilebert_qa_vocab.zip
+sample usage<br>
+https://github.com/onnx/models/blob/master/text/machine_comprehension/bert-squad/dependencies/run_onnx_squad.py
 
-
-### 2. convert to onnx
-
-Open notebook in colab and select GPU runtime
-// https://github.com/onnx/tensorflow-onnx/blob/master/tutorials/BertTutorial.ipynb
-
-### 3. run inverence
+### inverence
 //var session = new InferenceSession("model.onnx");
 
 ### 4. display result
