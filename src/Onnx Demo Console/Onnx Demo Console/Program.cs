@@ -56,7 +56,7 @@ namespace Onnx_Demo_Console
 
             var input = new List<NamedOnnxValue>()
             {
-                NamedOnnxValue.CreateFromTensor("0", x)
+                NamedOnnxValue.CreateFromTensor("Input3", x)
             };
 
             try
