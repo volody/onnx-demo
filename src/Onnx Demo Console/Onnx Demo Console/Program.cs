@@ -32,7 +32,7 @@ namespace Onnx_Demo_Console
 
         public static float[] ConvertImageToByteArray(Bitmap image)
         {
-            var imageByteArray = new float[image.Width * image.Height] ;
+            var imageByteArray = new float[image.Width * image.Height];
 
             for (int x = 0; x < image.Width; x++)
             {
@@ -53,6 +53,9 @@ namespace Onnx_Demo_Console
 
             for (int i = 0; i <= digit.Length - 1; i++)
                 x[i] = digit[i] / 255.0f;
+
+            int[] dims = { 1, 1, 28, 28 };  // hardcoded for now for the test data
+            x = x.Reshape(dims);
 
             var input = new List<NamedOnnxValue>()
             {
